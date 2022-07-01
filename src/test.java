@@ -9,6 +9,13 @@ public class test {
         System.out.print(waterKingValue);
     }
 
+    /**
+     * There is a principle of this function begin traverse this arr from index 0,
+     * compare values of two closer element ,the result is not equal then delete those two element,
+     * if not no nothing.The finally be left element maybe is the water King number
+     * @param arr
+     * @return if this arr has the water king return it , or not return -1
+     */
     public static int waterKing(int[] arr) {
         if (arr == null || arr.length == 0) {
             return -1;
@@ -32,6 +39,7 @@ public class test {
             return -1;
         }
 
+        //for check if the left number is ture water king
         int count = 0;
         for (int cur : arr) {
             if (cur == candidate) {
